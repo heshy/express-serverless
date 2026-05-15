@@ -31,7 +31,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6.1.0
         with:
           role-to-assume: '${{ secrets.AWS_GITHUB_DEPLOY_ROLE }}'
-          aws-region: ap-south-1
+          aws-region: us-east-1
       - name: Deploy using Serverless Framework
         run: 'npx serverless deploy --stage ${{ github.event.inputs.stage }}'
         env:
