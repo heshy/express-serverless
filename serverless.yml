@@ -17,4 +17,5 @@ functions:
   api:
     handler: handler.handler
     events:
-      - httpApi: "*"
+      - httpApi: "* /b4u-core"
+      - httpApi: "* /b4u-core/{proxy+}"
