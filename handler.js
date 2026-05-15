@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
-    message: "Hello from Hasitha Heshan !",
+    message: "Hello from Hasitha Heshan Kapuduwa !",
   });
 });
 
@@ -20,4 +20,4 @@ app.use((req, res, next) => {
   });
 });
 
-exports.handler = serverless(app);
+exports.handler = serverless(app, { basePath: '/b4u-core' });
